@@ -3,7 +3,7 @@ import { add } from "./add";
 
 describe(("toma un string como entradas y devuelve la suma de los números contenidos en el"), () => {
 
-  test(("****números positivos***"), () => {
+  test(("***números positivos***"), () => {
     expect(add("10,20,30")).toBe(60);
   })
 
@@ -27,4 +27,9 @@ describe(("toma un string como entradas y devuelve la suma de los números conte
   test("***notación científica***", () => {
     expect(add("1e3,2e3,1.5e3")).toBe(4500);
   })
+
+  test("*** validar que no sean string vacios***", () => {
+    expect(() => add("")).toThrowError("No se pueden sumar strings vacíos")
+  })
+
 })
