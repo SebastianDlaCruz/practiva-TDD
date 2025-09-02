@@ -19,4 +19,8 @@ describe(("toma un string como entradas y devuelve la suma de los números conte
     expect(add("-1.56,-2.50")).toBe(-4.0600000000000005);
   })
 
+  test("***diferentes delimitadores***", () => {
+    expect(add("1;2;3", ';')).toBe(6);
+  })
+
 })
