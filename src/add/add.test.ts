@@ -23,4 +23,8 @@ describe(("toma un string como entradas y devuelve la suma de los números conte
     expect(add("1;2;3", ';')).toBe(6);
   })
 
+
+  test("***notación científica***", () => {
+    expect(add("1e3,2e3,1.5e3")).toBe(4500);
+  })
 })
