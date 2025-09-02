@@ -28,8 +28,12 @@ describe(("toma un string como entradas y devuelve la suma de los números conte
     expect(add("1e3,2e3,1.5e3")).toBe(4500);
   })
 
-  test("*** validar que no sean string vacios***", () => {
+  test("***validar que no sean string vacíos***", () => {
     expect(() => add("")).toThrowError("No se pueden sumar strings vacíos")
+  })
+
+  test("***valida números y no letras***", () => {
+    expect(() => add("a,b,c")).toThrowError("No se pueden sumar letras")
   })
 
 })
